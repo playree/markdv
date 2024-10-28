@@ -31,3 +31,7 @@ dist-ssr
 !.yarn/releases
 !.yarn/sdks
 !.yarn/versions
+
+# next.js
+/.next/
+/out/
