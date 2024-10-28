@@ -4,12 +4,12 @@
   "version": "0.1.0",
   "type": "module",
   "scripts": {
-	  "dev": "next dev",
-	  "build": "next build",
-	  "start": "next start",
-	  "lint": "next lint",
-	  "tauri": "tauri"
-	},
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "tauri": "tauri"
+  },
   "dependencies": {
     "@tauri-apps/api": "^2.0.3",
     "@tauri-apps/plugin-shell": "^2.0.1",
@@ -22,6 +22,9 @@
     "@types/node": "^22.8.1",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.14",
     "typescript": "^5.6.3"
   },
   "packageManager": "yarn@4.5.1"
