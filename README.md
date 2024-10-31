@@ -1,7 +1,27 @@
-# Tauri + React + Typescript
+# Markdown Viewer
 
-This template should help get you started developing with Tauri, React and Typescript in Vite.
+# Develop
 
-## Recommended IDE Setup
+# Run
 
-- [VS Code](https://code.visualstudio.com/) + [Tauri](https://marketplace.visualstudio.com/items?itemName=tauri-apps.tauri-vscode) + [rust-analyzer](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer)
+```
+yarn tauri dev
+```
+
+# build
+
+```
+yarn tauri build
+```
+
+# update package
+
+```
+yarn upgrade-interactive
+```
+
+# update yarn
+
+```
+yarn set version latest --yarn-path
+```
