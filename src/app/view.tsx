@@ -6,6 +6,6 @@ import { FC } from 'react'
 
 export const View: FC = () => {
   const { mdContents } = useSharedUIContext()
-  return <MarkdownView markdown={mdContents} />
+  return <MarkdownView markdown={mdContents} className='p-2' />
 }
 View.displayName = 'View'

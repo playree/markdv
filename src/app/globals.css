@@ -110,8 +110,6 @@ pre[class*='language-'] {
   word-wrap: normal;
   color: #c3cee3;
   background: #263238;
-  font-size: 1em;
-  line-height: 1.5em;
 
   -moz-tab-size: 4;
   -o-tab-size: 4;
@@ -121,6 +119,8 @@ pre[class*='language-'] {
   -moz-hyphens: none;
   -ms-hyphens: none;
   hyphens: none;
+
+  @apply text-sm;
 }
 
 code[class*='language-']::-moz-selection,
@@ -313,4 +313,8 @@ pre[class*='language-'] {
 
 .token.variable {
   color: #f07178;
+}
+
+.rehype-code-title {
+  @apply mb-0 ml-4 text-sm;
 }

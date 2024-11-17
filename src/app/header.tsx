@@ -3,12 +3,38 @@
 import { ThemeSwitchList } from '@/components/theme-sw'
 import { Button } from '@nextui-org/react'
 import { open } from '@tauri-apps/plugin-dialog'
-import { BaseDirectory, readTextFile } from '@tauri-apps/plugin-fs'
-import { FC } from 'react'
+import { BaseDirectory, readTextFile, watch } from '@tauri-apps/plugin-fs'
+import { FC, useEffect, useState } from 'react'
 import { useSharedUIContext } from './context'
 
 export const Header: FC = () => {
   const { setMdContents } = useSharedUIContext()
+  const [filePath, setFilePath] = useState<string>()
+
+  useEffect(() => {
+    if (filePath) {
+      readTextFile(filePath, { baseDir: BaseDirectory.AppConfig }).then((contents) => setMdContents(contents))
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [filePath])
+
+  useEffect(() => {
+    if (filePath) {
+      watch(
+        filePath,
+        () => {
+          if (filePath) {
+            readTextFile(filePath, { baseDir: BaseDirectory.AppConfig }).then((contents) => setMdContents(contents))
+          }
+        },
+        {
+          baseDir: BaseDirectory.AppConfig,
+          delayMs: 1000,
+        },
+      )
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [filePath])
 
   const openFile = async () => {
     const selected = await open({
@@ -30,8 +56,7 @@ export const Header: FC = () => {
       return
     }
 
-    const contents = await readTextFile(selected, { baseDir: BaseDirectory.AppConfig })
-    setMdContents(contents)
+    setFilePath(selected)
   }
 
   return (
