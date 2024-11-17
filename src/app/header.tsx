@@ -31,7 +31,6 @@ export const Header: FC = () => {
     }
 
     const contents = await readTextFile(selected, { baseDir: BaseDirectory.AppConfig })
-    console.log(contents)
     setMdContents(contents)
   }
 
