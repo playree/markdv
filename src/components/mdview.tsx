@@ -11,6 +11,6 @@ export const MarkdownView: FC<{ markdown?: string }> = ({ markdown }) => {
     md2Html(markdown || '').then((html) => setMdHtml(html))
   }, [markdown])
 
-  return <div dangerouslySetInnerHTML={{ __html: mdHtml }} />
+  return <div className='markdown' dangerouslySetInnerHTML={{ __html: mdHtml }} />
 }
 MarkdownView.displayName = 'MarkdownView'
