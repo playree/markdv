@@ -1,15 +1,12 @@
 'use client'
 
-import { useSharedUIContext } from '@/app/context'
-import { FC, useEffect } from 'react'
+import { FC, ReactNode, useEffect } from 'react'
 
-export const MarkdownView: FC = () => {
-  const { mdContents } = useSharedUIContext()
-
+export const MarkdownView: FC<{ children: ReactNode }> = ({ children }) => {
   useEffect(() => {
-    console.debug('update mdContents :', mdContents)
-  }, [mdContents])
+    console.debug('mdview:update:', children)
+  }, [children])
 
-  return <div>{mdContents}</div>
+  return <div>{children}</div>
 }
 MarkdownView.displayName = 'MarkdownView'
