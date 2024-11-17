@@ -35,5 +35,11 @@
       // task for the `beforeBuildCommand` if used, must be configured in `.vscode/tasks.json`
       "preLaunchTask": "ui:build"
     }
+  ],
+  "compounds": [
+    {
+      "name": "Tauri Dev All",
+      "configurations": ["Tauri Dev Debug", "Attach to Webview"]
+    }
   ]
 }

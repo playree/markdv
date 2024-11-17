@@ -3703,6 +3703,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@tauri-apps/plugin-dialog@npm:^2.0.1":
+  version: 2.0.1
+  resolution: "@tauri-apps/plugin-dialog@npm:2.0.1"
+  dependencies:
+    "@tauri-apps/api": "npm:^2.0.0"
+  checksum: 10c0/66b078d7ca9f19b646b977e7e552a831cc09f18f47db46f1e1b32e0758d589a1b39dbcbc4eb0fb682f8bc12d1f83e981a3e4dec1dac9a926fe6cc4dc08119731
+  languageName: node
+  linkType: hard
+
+"@tauri-apps/plugin-fs@npm:^2.0.1":
+  version: 2.0.1
+  resolution: "@tauri-apps/plugin-fs@npm:2.0.1"
+  dependencies:
+    "@tauri-apps/api": "npm:^2.0.0"
+  checksum: 10c0/555d957d0e3f0f4d099e87f9236c391139fab9def82607d5a5535370ae13d9dd8ca6122980ac3e1339f216cf2c46fe0e51b125e558305694b77c5bcd3a3cdff4
+  languageName: node
+  linkType: hard
+
 "@tauri-apps/plugin-shell@npm:^2.0.1":
   version: 2.0.1
   resolution: "@tauri-apps/plugin-shell@npm:2.0.1"
@@ -6204,6 +6222,8 @@ __metadata:
     "@nextui-org/react": "npm:^2.4.8"
     "@tauri-apps/api": "npm:^2.0.3"
     "@tauri-apps/cli": "npm:^2.0.4"
+    "@tauri-apps/plugin-dialog": "npm:^2.0.1"
+    "@tauri-apps/plugin-fs": "npm:^2.0.1"
     "@tauri-apps/plugin-shell": "npm:^2.0.1"
     "@types/eslint-plugin-tailwindcss": "npm:^3.17.0"
     "@types/node": "npm:^22.8.1"
