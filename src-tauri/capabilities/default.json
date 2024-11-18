@@ -3,5 +3,12 @@
   "identifier": "default",
   "description": "Capability for the main window",
   "windows": ["main"],
-  "permissions": ["core:default", "shell:allow-open", "dialog:allow-open", "fs:allow-read-text-file", "fs:allow-watch"]
+  "permissions": [
+    "core:default",
+    "shell:allow-open",
+    "dialog:allow-open",
+    "fs:allow-read-text-file",
+    "fs:allow-watch",
+    "fs:allow-unwatch"
+  ]
 }
