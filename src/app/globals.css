@@ -63,7 +63,7 @@
 }
 
 .markdown pre {
-  @apply rounded bg-gray-100 p-4 dark:bg-gray-800;
+  @apply rounded bg-teal-950 p-4 dark:bg-gray-800;
 }
 
 .markdown pre code {
@@ -113,7 +113,6 @@ pre[class*='language-'] {
   word-break: normal;
   word-wrap: normal;
   color: #c3cee3;
-  background: #263238;
 
   -moz-tab-size: 4;
   -o-tab-size: 4;

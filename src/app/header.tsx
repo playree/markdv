@@ -6,7 +6,6 @@ import { getMatches } from '@tauri-apps/plugin-cli'
 import { open } from '@tauri-apps/plugin-dialog'
 import { BaseDirectory, readTextFile, watch } from '@tauri-apps/plugin-fs'
 
-import * as apip from '@tauri-apps/api/path'
 import { FC, useEffect, useState } from 'react'
 import { useSharedUIContext } from './context'
 
@@ -61,12 +60,6 @@ export const Header: FC = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [filePath, isWatch])
 
-  const test = async () => {
-    const appDataDirPath = await apip.appDataDir()
-    const path = await apip.join(appDataDirPath, 'test.md')
-    readTextFile(path).then((contents) => setMdContents(contents))
-  }
-
   const openFile = async () => {
     const selected = await open({
       multiple: false,
@@ -98,9 +91,6 @@ export const Header: FC = () => {
         <Switch className='ml-2 items-center' size='sm' isSelected={isWatch} onValueChange={setWatch}>
           Watch
         </Switch>
-        <Button size='sm' variant='light' onPress={test}>
-          test
-        </Button>
       </div>
       <div className='flex-auto'></div>
       <div className='flex-initial'>
