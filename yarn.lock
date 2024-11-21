@@ -3710,6 +3710,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@tauri-apps/plugin-cli@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "@tauri-apps/plugin-cli@npm:2.0.0"
+  dependencies:
+    "@tauri-apps/api": "npm:^2.0.0"
+  checksum: 10c0/c3b9ca633ea4a5a2796668833cfefd4daafd45c9222c93a41f96d3a57533eff3e68347da6246b04ec49a3b27ffd77e2338e3c14502bc3660372e2ab8c1196333
+  languageName: node
+  linkType: hard
+
 "@tauri-apps/plugin-dialog@npm:^2.0.1":
   version: 2.0.1
   resolution: "@tauri-apps/plugin-dialog@npm:2.0.1"
@@ -6544,6 +6553,7 @@ __metadata:
     "@nextui-org/react": "npm:^2.4.8"
     "@tauri-apps/api": "npm:^2.1.1"
     "@tauri-apps/cli": "npm:^2.1.0"
+    "@tauri-apps/plugin-cli": "npm:^2.0.0"
     "@tauri-apps/plugin-dialog": "npm:^2.0.1"
     "@tauri-apps/plugin-fs": "npm:^2.0.2"
     "@tauri-apps/plugin-shell": "npm:^2.0.1"

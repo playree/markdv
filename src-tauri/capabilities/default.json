@@ -6,6 +6,7 @@
   "permissions": [
     "core:default",
     "shell:allow-open",
+    "cli:default",
     "dialog:allow-open",
     "fs:allow-read-text-file",
     "fs:allow-watch",
