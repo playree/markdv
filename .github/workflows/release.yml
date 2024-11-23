@@ -2,6 +2,10 @@ name: 'release'
 
 on:
   workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version'
+        required: true
 
 jobs:
   create-release:
@@ -19,8 +23,18 @@ jobs:
         with:
           node-version: lts/*
 
+      # - name: get version
+      #   run: echo "PACKAGE_VERSION=$(node -p "require('./package.json').version")" >> $GITHUB_ENV
+
       - name: get version
-        run: echo "PACKAGE_VERSION=$(node -p "require('./package.json').version")" >> $GITHUB_ENV
+        run: echo "PACKAGE_VERSION=${{ github.event.inputs.version }}" >> $GITHUB_ENV
+
+      - name: update version tauri.conf.json
+        uses: jossef/action-set-json-field@v1
+        with:
+          file: src-tauri\tauri.conf.json
+          field: version
+          value: ${{ github.event.inputs.version }}
 
       - name: create release
         id: create-release
