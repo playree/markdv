@@ -30,9 +30,9 @@ jobs:
         run: echo "PACKAGE_VERSION=${{ github.event.inputs.version }}" >> $GITHUB_ENV
 
       - name: update version tauri.conf.json
-        uses: jossef/action-set-json-field@v1
+        uses: jossef/action-set-json-field@v2.1
         with:
-          file: src-tauri\tauri.conf.json
+          file: 'src-tauri/tauri.conf.json'
           field: version
           value: ${{ github.event.inputs.version }}
 
