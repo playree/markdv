@@ -10,7 +10,6 @@ yarn tauri dev
 
 # change version
 
-- src-tauri\tauri.conf.json
 - package.json
 
 # build
