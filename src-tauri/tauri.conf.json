@@ -13,6 +13,8 @@
     "windows": [
       {
         "title": "MarkdV",
+        "minWidth": 320,
+        "minHeight": 160,
         "width": 800,
         "height": 600
       }

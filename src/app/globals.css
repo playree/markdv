@@ -325,7 +325,17 @@ pre[class*='language-'] {
  */
 
 .rehype-code-title {
-  @apply mb-0 ml-4 text-sm;
+  @apply absolute z-10 mb-0 h-0 pl-4 pt-1 text-sm text-gray-200;
+  width: calc(100% - 16px);
+}
+
+.rehype-code-title::after {
+  @apply -ml-2 mt-2 block w-full border-b border-gray-500;
+  content: '';
+}
+
+.rehype-code-title + pre {
+  @apply pt-10;
 }
 
 /**
