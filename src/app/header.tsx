@@ -26,7 +26,7 @@ export const Header: FC = () => {
 
   useEffect(() => {
     if (filePath) {
-      readTextFile(filePath, { baseDir: BaseDirectory.AppConfig }).then((contents) => setMdContents(contents))
+      readTextFile(filePath).then((contents) => setMdContents(contents))
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [filePath])
@@ -38,7 +38,7 @@ export const Header: FC = () => {
           filePath,
           () => {
             if (filePath) {
-              readTextFile(filePath, { baseDir: BaseDirectory.AppConfig }).then((contents) => setMdContents(contents))
+              readTextFile(filePath).then((contents) => setMdContents(contents))
             }
           },
           {
@@ -83,7 +83,7 @@ export const Header: FC = () => {
   }
 
   return (
-    <nav className='sticky top-0 flex bg-gray-100 p-1 dark:bg-gray-900'>
+    <nav className='sticky top-0 z-30 flex bg-gray-100 p-1 dark:bg-gray-900'>
       <div className='flex flex-initial'>
         <Button size='sm' variant='light' onPress={openFile}>
           Open
