@@ -31,11 +31,11 @@
 }
 
 .markdown h1 {
-  @apply mb-4 mt-6 border-b pb-2 text-2xl font-semibold leading-tight;
+  @apply mb-4 mt-6 border-b pb-2 text-2xl font-semibold leading-tight dark:border-gray-700;
 }
 
 .markdown h2 {
-  @apply mb-4 mt-6 border-b pb-2 text-lg font-semibold leading-tight;
+  @apply mb-4 mt-6 border-b pb-2 text-lg font-semibold leading-tight dark:border-gray-700;
 }
 
 .markdown h3 {
@@ -59,11 +59,11 @@
 }
 
 .markdown code {
-  @apply inline rounded bg-gray-200 px-1 font-mono dark:bg-gray-800;
+  @apply inline rounded bg-gray-200 px-1 font-mono dark:bg-gray-900;
 }
 
 .markdown pre {
-  @apply rounded bg-teal-950 p-4 dark:bg-gray-800;
+  @apply rounded bg-teal-900 p-4 text-sm text-gray-100 dark:bg-gray-900;
 }
 
 .markdown pre code {

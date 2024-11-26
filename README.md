@@ -95,6 +95,6 @@ yarn upgrade-interactive
 
 ## update yarn
 
-```
+```sh
 yarn set version latest --yarn-path
 ```
