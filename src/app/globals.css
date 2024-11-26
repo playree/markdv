@@ -71,11 +71,11 @@
 }
 
 .markdown ul {
-  @apply list-disc pl-8 text-sm;
+  @apply list-disc pl-6 text-sm;
 }
 
 .markdown ol {
-  @apply list-decimal pl-8 text-sm;
+  @apply list-decimal pl-6 text-sm;
 }
 
 .markdown kbd {
@@ -325,7 +325,7 @@ pre[class*='language-'] {
  */
 
 .rehype-code-title {
-  @apply absolute z-10 mb-0 h-0 pl-4 pt-1 text-sm text-gray-200;
+  @apply absolute z-10 mb-0 h-0 pl-4 pt-1 text-sm text-gray-400;
   width: calc(100% - 16px);
 }
 

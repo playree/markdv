@@ -53,6 +53,9 @@ if (filePath) {
 
 ダイアログの`open`と、ファイルの`readTextFile`の為のパーミッションです。
 
+1. `dialog:allow-open`
+2. `fs:allow-read-text-file`
+
 ```json:src-tauri\capabilities\default.json {10-11} showLineNumbers
 {
   "$schema": "../gen/schemas/desktop-schema.json",
