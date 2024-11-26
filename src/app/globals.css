@@ -59,15 +59,15 @@
 }
 
 .markdown code {
-  @apply inline rounded bg-gray-200 px-1 font-mono dark:bg-gray-900;
+  @apply inline rounded bg-gray-200 px-1 font-mono dark:bg-gray-700;
 }
 
 .markdown pre {
-  @apply rounded bg-teal-900 p-4 text-sm text-gray-100 dark:bg-gray-900;
+  @apply rounded bg-slate-800 p-4 text-sm text-gray-100 dark:bg-slate-900;
 }
 
 .markdown pre code {
-  @apply block overflow-visible rounded-none bg-transparent p-0;
+  @apply block overflow-visible rounded-none bg-slate-800 bg-transparent p-0 dark:bg-slate-900;
 }
 
 .markdown ul {
