@@ -18,9 +18,9 @@
     "@tauri-apps/plugin-dialog": "^2.0.1",
     "@tauri-apps/plugin-fs": "^2.0.2",
     "@tauri-apps/plugin-shell": "^2.0.1",
-    "framer-motion": "^11.11.17",
+    "framer-motion": "^11.12.0",
     "next": "14.2.18",
-    "next-themes": "^0.3.0",
+    "next-themes": "^0.4.3",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "rehype-code-titles": "^1.2.0",
@@ -30,14 +30,14 @@
     "rehype-stringify": "^10.0.1",
     "remark-parse": "^11.0.0",
     "remark-rehype": "^11.1.1",
-    "tailwind-merge": "^2.5.4",
-    "tailwind-variants": "^0.2.1",
+    "tailwind-merge": "^2.5.5",
+    "tailwind-variants": "^0.3.0",
     "unified": "^11.0.5"
   },
   "devDependencies": {
     "@tauri-apps/cli": "^2.1.0",
     "@types/eslint-plugin-tailwindcss": "^3.17.0",
-    "@types/node": "^22.8.1",
+    "@types/node": "^22.10.1",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
     "autoprefixer": "^10.4.20",
@@ -46,11 +46,11 @@
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-tailwindcss": "^3.17.5",
     "postcss": "^8.4.49",
-    "prettier": "^3.3.3",
+    "prettier": "^3.4.1",
     "prettier-plugin-organize-imports": "^4.1.0",
-    "prettier-plugin-tailwindcss": "^0.6.8",
+    "prettier-plugin-tailwindcss": "^0.6.9",
     "tailwindcss": "^3.4.15",
-    "typescript": "^5.6.3"
+    "typescript": "^5.7.2"
   },
-  "packageManager": "yarn@4.5.1"
+  "packageManager": "yarn@4.5.3"
 }
