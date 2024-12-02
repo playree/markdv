@@ -6,12 +6,12 @@ import { getMatches } from '@tauri-apps/plugin-cli'
 import { open } from '@tauri-apps/plugin-dialog'
 import { BaseDirectory, readTextFile, watch } from '@tauri-apps/plugin-fs'
 
+import { invoke } from '@tauri-apps/api/core'
 import { FC, useEffect, useState } from 'react'
 import { useSharedUIContext } from './context'
 
 export const Header: FC = () => {
-  const { setMdContents } = useSharedUIContext()
-  const [filePath, setFilePath] = useState<string>()
+  const { setMdContents, setMdFilePath, mdFilePath } = useSharedUIContext()
   const [isWatch, setWatch] = useState(false)
   const [unWatch, setUnWatch] = useState<ReturnType<typeof watch>>()
 
@@ -19,26 +19,27 @@ export const Header: FC = () => {
     getMatches().then(({ args }) => {
       console.debug('args:', args)
       if (args.source.value && typeof args.source.value === 'string') {
-        setFilePath(args.source.value)
+        setMdFilePath(args.source.value)
       }
     })
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   useEffect(() => {
-    if (filePath) {
-      readTextFile(filePath).then((contents) => setMdContents(contents))
+    if (mdFilePath) {
+      readTextFile(mdFilePath).then((contents) => setMdContents(contents))
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [filePath])
+  }, [mdFilePath])
 
   useEffect(() => {
-    if (filePath && isWatch) {
+    if (mdFilePath && isWatch) {
       setUnWatch(
         watch(
-          filePath,
+          mdFilePath,
           () => {
-            if (filePath) {
-              readTextFile(filePath).then((contents) => setMdContents(contents))
+            if (mdFilePath) {
+              readTextFile(mdFilePath).then((contents) => setMdContents(contents))
             }
           },
           {
@@ -58,7 +59,7 @@ export const Header: FC = () => {
       }
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [filePath, isWatch])
+  }, [mdFilePath, isWatch])
 
   const openFile = async () => {
     const selected = await open({
@@ -79,7 +80,11 @@ export const Header: FC = () => {
       return
     }
 
-    setFilePath(selected)
+    setMdFilePath(selected)
+  }
+
+  const edit = async () => {
+    await invoke('open_edit')
   }
 
   return (
@@ -91,6 +96,9 @@ export const Header: FC = () => {
         <Switch className='ml-2 items-center' size='sm' isSelected={isWatch} onValueChange={setWatch}>
           Watch
         </Switch>
+        <Button size='sm' variant='light' onPress={edit}>
+          Edit
+        </Button>
       </div>
       <div className='flex-auto'></div>
       <div className='flex-initial'>
