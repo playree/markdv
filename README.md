@@ -9,6 +9,9 @@
   - [build](#build)
   - [update package](#update-package)
   - [update yarn](#update-yarn)
+- [Markdownサンプル](#markdownサンプル)
+  - [テーブル](#テーブル)
+  - [Mermaid](#mermaid)
 
 # Markdown Viewer
 
@@ -17,7 +20,7 @@ Markdownファイルを表示するだけ(今のところ)のビューアです�
 `Tauri 2.0`での開発のお試しプロジェクトでもあります。\
 なので、本アプリは`Tauri 2.0`で開発されています。
 
-<https://v2.tauri.app/>
+https://v2.tauri.app/
 
 # 開発者向け
 
@@ -100,4 +103,21 @@ yarn upgrade-interactive
 
 ```sh
 yarn set version latest --yarn-path
+```
+
+# Markdownサンプル
+
+## テーブル
+
+| a   | b   | c   |
+| --- | --- | --- |
+| 1   | 2   | 3   |
+
+## Mermaid
+
+```mermaid
+sequenceDiagram
+
+front ->>+ back: req
+back -->>- front: res
 ```

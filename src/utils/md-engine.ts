@@ -3,6 +3,7 @@ import rehypeExternalLinks from 'rehype-external-links'
 import rehypePrism from 'rehype-prism-plus'
 import rehypeSlug from 'rehype-slug'
 import rehypeStringify from 'rehype-stringify'
+import remarkGfm from 'remark-gfm'
 import remarkParse from 'remark-parse'
 import remarkRehype from 'remark-rehype'
 import { unified } from 'unified'
@@ -10,6 +11,7 @@ import { unified } from 'unified'
 export const md2Html = async (md: string) => {
   const res = await unified()
     .use(remarkParse)
+    .use(remarkGfm)
     .use(remarkRehype)
     .use(rehypeCodeTitles)
     .use(rehypePrism)
