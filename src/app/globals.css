@@ -87,11 +87,11 @@
 }
 
 .markdown th {
-  @apply border px-3 py-1;
+  @apply border border-gray-600 px-3 py-1;
 }
 
 .markdown td {
-  @apply border px-3 py-1;
+  @apply border border-gray-600 px-3 py-1;
 }
 
 /* Override pygments style background color. */
@@ -386,4 +386,14 @@ pre {
   margin-left: -8px;
   color: rgb(156, 163, 175); /* Line number color */
   content: attr(line);
+}
+
+/**
+ * ====
+ * Mermaid
+ * ====
+ */
+
+[id^='mermaid-'] {
+  @apply rounded-md bg-gray-50;
 }

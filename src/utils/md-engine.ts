@@ -1,5 +1,6 @@
 import rehypeCodeTitles from 'rehype-code-titles'
 import rehypeExternalLinks from 'rehype-external-links'
+import rehypeMermaid from 'rehype-mermaid'
 import rehypePrism from 'rehype-prism-plus'
 import rehypeSlug from 'rehype-slug'
 import rehypeStringify from 'rehype-stringify'
@@ -17,6 +18,7 @@ export const md2Html = async (md: string) => {
     .use(rehypePrism)
     .use(rehypeSlug)
     .use(rehypeExternalLinks, { target: '_blank' })
+    .use(rehypeMermaid)
     .use(rehypeStringify)
     .process(md)
   return res.toString()
